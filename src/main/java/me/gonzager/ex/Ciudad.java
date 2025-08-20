@@ -35,4 +35,8 @@ public class Ciudad {
         this.limiteDrones = limiteDrones;
     }
 
+    public Ciudad() {
+        // Constructor por defecto
+    }
+
 }

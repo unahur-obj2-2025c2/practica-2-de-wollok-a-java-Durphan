@@ -1,12 +1,13 @@
 package me.gonzager.ex.operaciones.dron;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import me.gonzager.ex.operaciones.mision.IMision;
 import me.gonzager.ex.operaciones.sensor.Sensor;
 
 public class DronSeguridad extends Dron {
-    List<Sensor> sensores;
+    List<Sensor> sensores = new ArrayList<>();
 
     @Override
     public boolean esAvanzado() {

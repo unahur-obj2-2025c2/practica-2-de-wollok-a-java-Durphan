@@ -20,7 +20,7 @@ public class MisionVigilancia implements IMision {
             if (!sensor.tieneMejoras()) {
                 acumulador += sensor.getCapacidad();
             } else {
-                acumulador *= 2;
+                acumulador *= sensor.getCapacidad() * 2;
             }
         }
         return acumulador;

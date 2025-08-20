@@ -14,7 +14,7 @@ public class DronComercial extends Dron {
     }
 
     @Override
-    public int autonomiaExtra() {
+    int autonomiaExtra() {
         return 15;
     }
 

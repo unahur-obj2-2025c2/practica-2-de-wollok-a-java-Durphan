@@ -12,12 +12,19 @@ public class Escuadron {
     private Zona zona;
 
     public Escuadron(Zona zona) {
-
-        this.zona = zona;
+        setZona(zona);
     }
 
     public Escuadron() {
 
+    }
+
+    public void agregarDron(Dron dron) {
+        if (zona != null && zona.getCiudad().getLimiteDrones() <= cantidadDeDrones()) {
+            throw new IllegalArgumentException(
+                    "No se pueden agregar mas drones al escuadron, se alcanzo el limite de la ciudad");
+        }
+        drones.add(dron);
     }
 
     public Escuadron(List<Dron> drones, Zona zona) {
@@ -41,6 +48,7 @@ public class Escuadron {
                     "El escuadron no cumple los requerimientos para operar en la zona");
         }
         this.zona = zona;
+        zona.incrementarOperaciones();
     }
 
     public int cantidadDeDrones() {
