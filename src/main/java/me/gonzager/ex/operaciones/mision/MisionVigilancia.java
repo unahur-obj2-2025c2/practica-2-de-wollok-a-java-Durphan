@@ -15,15 +15,7 @@ public class MisionVigilancia implements IMision {
     @Override
     public int extra(Dron dron) throws IllegalArgumentException {
         DronSeguridad dronSeguridad = getDronSeguridad(dron);
-        int acumulador = 0;
-        for (Sensor sensor : dronSeguridad.getSensores()) {
-            if (!sensor.tieneMejoras()) {
-                acumulador += sensor.getCapacidad();
-            } else {
-                acumulador *= sensor.getCapacidad() * 2;
-            }
-        }
-        return acumulador;
+        return dronSeguridad.getSensores().stream().mapToInt(Sensor::getEficienciaOperativa).sum();
         /*
          * Uso de reduce (Para experimentar, en casos como estos usar reduce puede ser
          * sobreingenieria)

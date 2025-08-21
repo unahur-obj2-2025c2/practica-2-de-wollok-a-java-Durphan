@@ -11,7 +11,7 @@ public class DronSeguridad extends Dron {
 
     @Override
     public boolean esAvanzado() {
-        return this.nivelProcesamiento > 50 || misionActual.esDronAvanzado(this);
+        return this.getNivelProcesamiento() > 50 || misionActual.esDronAvanzado(this);
     }
 
     public List<Sensor> getSensores() {

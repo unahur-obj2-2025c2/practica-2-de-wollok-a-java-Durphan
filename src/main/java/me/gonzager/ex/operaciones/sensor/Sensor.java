@@ -28,4 +28,8 @@ public class Sensor {
     public boolean esDuradero() {
         return durabilidad > capacidad * 2;
     }
+
+    public int getEficienciaOperativa() {
+        return this.tieneMejoras ? capacidad * 2 : capacidad;
+    }
 }

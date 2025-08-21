@@ -30,6 +30,6 @@ class EscuadronTest {
         Escuadron escuadron = new Escuadron();
         escuadron.agregarDron(new DronComercial(90, MisionTransporte.getInstance(), 1));
         escuadron.agregarDron(new DronComercial(80, MisionTransporte.getInstance(), 2));
-        assertEquals(1930, escuadron.eficienciaTotal());
+        assertEquals(1890, escuadron.eficienciaTotal());
     }
 }

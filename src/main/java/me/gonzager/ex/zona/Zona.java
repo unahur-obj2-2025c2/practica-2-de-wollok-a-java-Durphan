@@ -28,7 +28,6 @@ public class Zona {
     public Zona(int tamanioTotal, Ciudad ciudad) {
         this.tamanioTotal = tamanioTotal;
         this.ciudad = ciudad;
-        ciudad.agregarZona(this);
     }
 
     public Ciudad getCiudad() {
@@ -40,7 +39,6 @@ public class Zona {
             throw new IllegalArgumentException("Esta zona ya pertenece a una ciudad");
         }
         this.ciudad = ciudad;
-        ciudad.agregarZona(this);
     }
 
     public boolean puedeEscuadronIngresar(Escuadron escuadron) {

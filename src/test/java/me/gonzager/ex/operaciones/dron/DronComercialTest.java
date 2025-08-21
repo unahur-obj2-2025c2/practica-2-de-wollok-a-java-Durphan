@@ -28,7 +28,7 @@ class DronComercialTest {
     @Test
     void testConstructor() {
         assertEquals(50, dronComercial.getAutonomia());
-        assertEquals(0, dronComercial.nivelProcesamiento);
+        assertEquals(0, dronComercial.getNivelProcesamiento());
         assertEquals(MisionExploracion.getInstance(), dronComercial.misionActual);
     }
 

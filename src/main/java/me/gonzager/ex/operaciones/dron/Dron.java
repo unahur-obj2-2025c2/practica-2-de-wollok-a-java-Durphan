@@ -8,7 +8,7 @@ public abstract class Dron {
 
     IMision misionActual;
 
-    int nivelProcesamiento;
+    private final int nivelProcesamiento;
 
     int autonomiaExtra() {
         return 0;
@@ -26,6 +26,14 @@ public abstract class Dron {
 
     public int getAutonomia() {
         return autonomia;
+    }
+
+    public void restarAutonomia(int autonomia) {
+        this.autonomia -= autonomia;
+    }
+
+    public int getNivelProcesamiento() {
+        return nivelProcesamiento;
     }
 
     protected Dron(int autonomia, IMision misionActual, int nivelProcesamiento) {
