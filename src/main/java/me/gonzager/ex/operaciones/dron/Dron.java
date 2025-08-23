@@ -4,13 +4,13 @@ import me.gonzager.ex.operaciones.mision.IMision;
 
 public abstract class Dron {
 
-    int autonomia;
+    private int autonomia;
 
-    IMision misionActual;
+    protected IMision misionActual;
 
     private final int nivelProcesamiento;
 
-    int autonomiaExtra() {
+    public int autonomiaExtra() {
         return 0;
     }
 
